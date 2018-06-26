@@ -42,10 +42,4 @@ public class Menu {
     public void setId(int id) { this.id = id; }
 
     public List<Cheese> getCheeses() { return cheeses; }
-
-    public String getById(int id) {
-        this.id = id;
-        return name;
-    }
-
 }

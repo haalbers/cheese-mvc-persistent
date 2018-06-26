@@ -8,12 +8,17 @@
 
         <nav th:replace="fragments :: navigation"></nav>
 
-        <table class="table">
+        <p th:unless="${menu.cheeses.size()}"><br/>No cheeses yet</p>
 
+
+        <br/>
+
+        <table class="table">
             <ul th:each="cheese : ${menu.cheeses}">
                 <li th:text="${cheese.name}"></li>
             </ul>
 
+         <br/>
             <p><a th:href="'/menu/add-item/' + ${menu.id}">Add Cheese</a></p>
 
         </table>
